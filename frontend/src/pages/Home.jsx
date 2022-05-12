@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Map from "../components/Map";
 
 export default function Home() {
   const [landfill, setLandfill] = useState();
@@ -60,6 +61,7 @@ export default function Home() {
           collecte:{wasteCollection.fields.jour}
         </p>
       )}
+      <Map />
     </>
   );
 }

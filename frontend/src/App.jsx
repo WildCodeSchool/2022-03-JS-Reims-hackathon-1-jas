@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import Result from "./pages/Result";
 import Connect from "./pages/Connect";
 import MyBin from "./pages/MyBin";
-import Map from "./components/Map";
 import "./App.css";
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
             <Route path="/result" element={<Result />} />
             <Route path="/connect" element={<Connect />} />
             <Route path="/mybin" element={<MyBin />} />
-            <Route path="/map" element={<Map />} />
           </Routes>
         </main>
       </Router>
