@@ -36,7 +36,7 @@ export default function Result() {
     <>
       <p>Hello I am Result</p>
       {wasteCollection && (
-        <p>
+        <p className="collect">
           Type de collecte : {wasteCollection.fields.type_collecte}, Date de
           collecte:{wasteCollection.fields.jour}
         </p>

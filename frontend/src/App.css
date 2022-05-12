@@ -1,7 +1,78 @@
+@font-face {
+  font-family: "Cerebri_Sans_Bold";
+  src: url(./assets/Cerebri_Sans_SemiBold.ttf);
+}
+
 :root {
   --dark-green: #346b34;
   --light-green: #1fc875;
   --pale-green: #d4f9e8;
   --beige: #f8f2dd;
   --light-beige: #fffffa;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Cerebri_Sans_Bold";
+  background-color: var(--light-green);
+  color: var(--beige);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: var(--beige);
+  text-decoration: none;
+  padding-bottom: 2rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+.login {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+input {
+  border: none;
+}
+
+.button {
+  background-color: var(--beige);
+  color: var(--dark-green);
+  border: none;
+}
+
+.collect {
+  display: inherit;
+  text-align: center;
+}
+
+:is(.email, .password) input:focus, :active {
+  outline: none;
 }
