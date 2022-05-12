@@ -1,8 +1,14 @@
+import Home from "./pages/Home";
 import Map from "./components/Map";
 import "./App.css";
 
 function App() {
-  return <Map />;
+  return (
+    <div>
+      <Home />
+      <Map />
+    </div>
+  );
 }
 
 export default App;
