@@ -5,7 +5,7 @@ export default function Header() {
     <>
       <Link to="/connect">
         <img
-          src="/src/assets/images/login-person-shadow.png"
+          src="/src/assets/images/login-person-beige.png"
           alt="login"
           className="login-image"
         />
