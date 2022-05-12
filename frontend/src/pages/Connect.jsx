@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Connect() {
   return (
     <>
@@ -6,7 +8,9 @@ export default function Connect() {
         Mot de passe :{" "}
         <input type="password" id="pass" name="password" required />
       </form>
-      <button type="button">Se connecter</button>
+      <Link to="/mybin">
+        <button type="button">Se connecter</button>
+      </Link>
     </>
   );
 }
