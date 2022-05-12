@@ -2,8 +2,8 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import useGeolocation from "react-hook-geolocation";
 import PropTypes from "prop-types";
 
-const position = [49.2571662, 4.0200121];
-const geoposition = [49.2571662, 4.0200121];
+const position = [49.0247586902, 1.15919095503];
+const geoposition = [49.0247586902, 1.15919095503];
 
 function Map({
   landfillAddress,
@@ -37,7 +37,7 @@ function Map({
         </Popup>
       </Marker>
       <Marker position={geoposition}>
-        <Popup>Voici Quartier Libre.</Popup>
+        <Popup>Your position.</Popup>
       </Marker>
     </MapContainer>
   );
