@@ -1,8 +1,20 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Home() {
   const [search, setSearch] = useState("");
+  const wasteTypeArray = [
+    "bottes",
+    "bouchon de bouteille",
+    "bouteille d'eau",
+    "bouteille de lait",
+    "bouteille de vin",
+    "carton",
+    "cartouche d'encre",
+    "chaîne",
+    "chaise",
+    "chaussures",
+  ];
 
   return (
     <>
@@ -18,8 +30,15 @@ export default function Home() {
         value={search}
         onChange={(event) => setSearch(event.target.value)}
       />
-      <Link to="/result">
+      <Link to={wasteTypeArray[2].includes(search) ? "/homebin" : "/awaybin"}>
         <button type="button"> Rechercher </button>
+        <ul>
+          {wasteTypeArray
+            .filter((waste) => search !== "" && waste.includes(search))
+            .map((waste) => (
+              <li key={waste}>{waste}</li>
+            ))}
+        </ul>
       </Link>
     </>
   );
