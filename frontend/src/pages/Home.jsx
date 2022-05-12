@@ -4,6 +4,7 @@ import axios from "axios";
 export default function Home() {
   const [landfill, setLandfill] = useState();
   const [wasteCollection, setWasteCollection] = useState();
+  const [search, setSearch] = useState("");
 
   function pickWasteCollection() {
     axios
@@ -32,7 +33,20 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <>
+      <div className="presentation">
+        <h1>Je suis Mister Bin</h1>
+        <h2>Votre assistant dans la gestion des déchets</h2>
+      </div>
+      <p>Quel déchet souhaitez-vous jeter ?</p>
+      <input
+        id="search"
+        name="search"
+        type="text"
+        value={search}
+        onChange={(event) => setSearch(event.target.value)}
+      />
+      <button type="button"> Rechercher </button>
       {landfill && (
         <p>
           Adresse : {landfill.fields.adresse},{landfill.fields.lieu_de_collecte}
@@ -46,6 +60,6 @@ export default function Home() {
           collecte:{wasteCollection.fields.jour}
         </p>
       )}
-    </div>
+    </>
   );
 }
