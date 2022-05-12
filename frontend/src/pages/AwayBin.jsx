@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Map from "../components/Map";
+import Header from "../components/Header";
 
 export default function AwayBin() {
   const [landfill, setLandfill] = useState();
@@ -22,6 +23,7 @@ export default function AwayBin() {
 
   return (
     <>
+      <Header />
       <h1>Votre recherche</h1>
       <p>
         Un(e) chaise est un déchet à jeter en déchetterie, la carte ci-dessous
