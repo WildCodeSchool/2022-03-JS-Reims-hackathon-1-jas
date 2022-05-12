@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Result from "./pages/Result";
+import HomeBin from "./pages/HomeBin";
+import AwayBin from "./pages/AwayBin";
 import Connect from "./pages/Connect";
 import MyBin from "./pages/MyBin";
 import Header from "./components/Header";
@@ -14,7 +15,8 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/result" element={<Result />} />
+            <Route path="/homebin" element={<HomeBin />} />
+            <Route path="/awaybin" element={<AwayBin />} />
             <Route path="/connect" element={<Connect />} />
             <Route path="/mybin" element={<MyBin />} />
           </Routes>
