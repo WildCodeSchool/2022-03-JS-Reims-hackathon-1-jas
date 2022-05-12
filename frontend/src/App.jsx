@@ -1,14 +1,8 @@
-import Home from "@pages/Home";
-
+import Map from "./components/Map";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
-    </div>
-  );
+  return <Map />;
 }
 
 export default App;
