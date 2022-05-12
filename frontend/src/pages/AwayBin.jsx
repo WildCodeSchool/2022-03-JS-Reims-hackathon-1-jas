@@ -2,20 +2,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Map from "../components/Map";
 
-export default function Result() {
+export default function AwayBin() {
   const [landfill, setLandfill] = useState();
-  const [wasteCollection, setWasteCollection] = useState();
 
-  function pickWasteCollection() {
-    axios
-      .get(
-        "https://epn-agglo.opendatasoft.com/api/records/1.0/search/?dataset=collecte-des-dechets&q="
-      )
-      .then((response) => response.data)
-      .then((data) => {
-        setWasteCollection(data.records[0]);
-      });
-  }
   function pickLandfill() {
     axios
       .get(
@@ -29,18 +18,15 @@ export default function Result() {
 
   useEffect(() => {
     pickLandfill();
-    pickWasteCollection();
   }, []);
 
   return (
     <>
-      <p>Hello I am Result</p>
-      {wasteCollection && (
-        <p className="collect">
-          Type de collecte : {wasteCollection.fields.type_collecte}, Date de
-          collecte:{wasteCollection.fields.jour}
-        </p>
-      )}
+      <h1>Votre recherche</h1>
+      <p>
+        Un(e) chaise est un déchet à jeter en déchetterie, la carte ci-dessous
+        vous indique la déchetterie la plus proche de vous
+      </p>
       {landfill && (
         <Map
           landfillAddress={landfill.fields.nom}
