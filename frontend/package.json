@@ -10,6 +10,9 @@
     "fix": "prettier --write . && eslint --fix --ext .jsx ."
   },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.7.0",
     "axios": "^0.27.2",
     "dom": "^0.0.3",
     "prop-types": "^15.8.1",
