@@ -35,8 +35,7 @@ export default function Home() {
       />
       <Link to={wasteTypeArray[2].includes(search) ? "/homebin" : "/awaybin"}>
         <button type="button" className="button-search">
-          {" "}
-          Rechercher{" "}
+          Rechercher
         </button>
         <ul>
           {wasteTypeArray
