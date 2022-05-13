@@ -47,7 +47,7 @@ export default function Home() {
         <Link to={wasteTypeArray[2].includes(search) ? "/homebin" : "/awaybin"}>
           <ul className="waste-result">
             {wasteTypeArray
-              .filter((waste) => search !== "" && waste.includes(search))
+              .filter((waste) => search !== "" && waste.startsWith(search))
               .map((waste) => (
                 <li key={waste}>{waste}</li>
               ))}
