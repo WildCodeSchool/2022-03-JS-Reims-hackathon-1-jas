@@ -88,7 +88,7 @@ export default function MyBin() {
               closeTimeoutMS={500}
             >
               <img
-                src="/src/assets/images/mister-bin-flag.png"
+                src="/src/assets/images/mister-bin-flag-white-bg.png"
                 alt="mascot-flag"
                 className="mascot-flag"
               />

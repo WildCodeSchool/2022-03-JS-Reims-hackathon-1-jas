@@ -241,7 +241,11 @@ input:focus {
   opacity: 0;
 }
 .mascot-flag {
-  max-height: 100px;
+  max-height: 150px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 700px) {
   .mascot,
