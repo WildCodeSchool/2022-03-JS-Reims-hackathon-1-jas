@@ -70,6 +70,7 @@ h2 {
   text-align: center;
 }
 
-:is(.email, .password) input:focus, :active {
+:is(.search, .email, .password) input:focus, :focus-within, :active {
+  border: none;
   outline: none;
 }
