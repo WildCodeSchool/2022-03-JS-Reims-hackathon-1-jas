@@ -29,7 +29,7 @@ body {
   color: var(--beige);
 }
 
-main {
+main, section {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -38,9 +38,19 @@ main {
   padding: 1rem;
 }
 
-main > * + * {
+.mybin-h2 {
   margin-top: 1rem;
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
 
 .connect {
   position: absolute;
@@ -52,6 +62,16 @@ main > * + * {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.presentation > h1 {
+  margin-bottom: 1rem;
+}
+
+.home-p {
+  font-size: larger;
+  margin-top: 4rem;
 }
 
 h1 {
@@ -83,7 +103,9 @@ h2 {
 }
 .mascot-quiet {
   height: 250px;
-  margin-bottom: 1rem;
+}
+.mascot {
+  margin-top: 1rem;
 }
 
 .flex-container {
@@ -197,6 +219,7 @@ input:focus {
   flex-direction: column;
   text-align: center;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .map-container {
@@ -301,8 +324,15 @@ strong {
   opacity: 0;
 }
 
-details {
+.details-container {
+  text-align: center;
+}
+
+.details {
   margin-top: 1rem;
+  display: flex;
+  min-height: 200px;
+  max-height: 30vh;
 }
 
 .mascot-flag {
@@ -318,6 +348,9 @@ details {
   .mascot-showing {
     display: flex;
     flex-direction: row-reverse;
+  }
+  p {
+    max-width: 75%;
   }
 }
 

@@ -50,15 +50,13 @@ export default function HomeBin() {
         </ul>
       )}
       <div>
-        <details>
-          <summary>Le saviez-vous ?</summary>
-          <p className="did-you-know">
-            Un Français consomme en moyenne 96 bouteilles plastiques par an !
-            Chaque jour, 25 millions de bouteilles sont jetées dans le pays.
-            Pour en finir avec ces chiffres vertigineux, sachez enfin que la
-            production de plastique a été multipliée par 50 en 50 ans en France.
-          </p>
-        </details>
+        <h3>Le saviez-vous ?</h3>
+        <p className="did-you-know">
+          Un Français consomme en moyenne 96 bouteilles plastiques par an !
+          Chaque jour, 25 millions de bouteilles sont jetées dans le pays. Pour
+          en finir avec ces chiffres vertigineux, sachez enfin que la production
+          de plastique a été multipliée par 50 en 50 ans en France.
+        </p>
       </div>
     </>
   );
