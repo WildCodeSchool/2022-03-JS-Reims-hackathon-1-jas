@@ -34,6 +34,11 @@ export default function MyBin() {
     <>
       <Header />
       <h2>Bonjour Simon !</h2>
+      <img
+        src="src/assets/images/mister-bin-welcome.png"
+        alt="mascot-welcome"
+        className="mascot-welcome"
+      />
       <main className="main-mybin">
         <div className="around-me">
           Vous pouvez retrouvez sur la carte tous les points de récoltes autour
