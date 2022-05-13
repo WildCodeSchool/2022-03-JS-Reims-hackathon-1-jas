@@ -15,7 +15,7 @@ export default function Connect() {
         </div>
       </form>
       <Link to="/mybin">
-        <button type="button" className="button">
+        <button type="button" className="button-connect">
           Se connecter
         </button>
       </Link>
