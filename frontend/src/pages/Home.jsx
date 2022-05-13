@@ -33,7 +33,7 @@ export default function Home() {
         onChange={(event) => setSearch(event.target.value)}
       />
       <Link to={wasteTypeArray[2].includes(search) ? "/homebin" : "/awaybin"}>
-        <button type="button" className="button">
+        <button type="button" className="button-search">
           {" "}
           Rechercher{" "}
         </button>
