@@ -47,7 +47,6 @@ main {
   align-items: center;
 }
 
-.header :nth-child(2),
 h1 {
   color: var(--beige);
   text-decoration: none;
@@ -76,9 +75,6 @@ h2 {
   text-align: center;
 }
 
-:is(.search, .email, .password) input:focus,
-:focus-within,
-:active {
-  border: none;
+:is(.email, .password) input:focus, :active {
   outline: none;
 }

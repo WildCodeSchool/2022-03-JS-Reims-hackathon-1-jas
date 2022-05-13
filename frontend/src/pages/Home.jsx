@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Header from "../components/Header";
 
 export default function Home() {
   const [search, setSearch] = useState("");
@@ -18,6 +19,7 @@ export default function Home() {
 
   return (
     <>
+      <Header />
       <div className="presentation">
         <h1>Je suis Mister Bin</h1>
         <h2>Votre assistant dans la gestion des déchets</h2>
