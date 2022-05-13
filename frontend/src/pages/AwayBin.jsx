@@ -27,8 +27,19 @@ export default function AwayBin() {
       <h1>Votre recherche</h1>
       <p>
         Un(e) chaise est un déchet à jeter en déchetterie, la carte ci-dessous
-        vous indique la déchetterie la plus proche de vous
+        vous indique la déchetterie la plus proche de vous.
       </p>
+      <div className="did-you-know">
+        <h3>Le saviez-vous ?</h3>
+        <p>
+          La France produit chaque année 14 millions de tonnes de déchets de
+          bois. Et contrairement aux idées reçues, le recyclage du bois ne
+          permet pas de créer de la pâte à papier. Les déchets de bois ont deux
+          débouchés principaux : la valorisation matière dans l’industrie des
+          panneaux de particules et la valorisation énergétique en chaufferie.
+        </p>
+      </div>
+
       {landfill && (
         <Map
           landfillAddress={landfill.fields.nom}
