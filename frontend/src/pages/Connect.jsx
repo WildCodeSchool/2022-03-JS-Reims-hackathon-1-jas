@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
 export default function Connect() {
   return (
     <>
+      <Header />
       <form className="login">
         <div className="email">
           Email : <input id="email" name="email" type="email" />

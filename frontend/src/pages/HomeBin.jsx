@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Header from "../components/Header";
 
 export default function HomeBin() {
   const [wasteCollection, setWasteCollection] = useState();
@@ -21,6 +22,7 @@ export default function HomeBin() {
 
   return (
     <>
+      <Header />
       <h1>Votre recherche</h1>
       <p>
         {/* eslint-disable-next-line react/no-unescaped-entities */}
