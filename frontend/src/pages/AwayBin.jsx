@@ -26,8 +26,8 @@ export default function AwayBin() {
       <Header />
       <h1>Votre recherche</h1>
       <p>
-        Un(e) chaise est un déchet à jeter en déchetterie, la carte ci-dessous
-        vous indique la déchetterie la plus proche de vous.
+        La <strong>chaise</strong> est un déchet à jeter en déchetterie, la
+        carte ci-dessous vous indique la déchetterie la plus proche de vous.
       </p>
       <div>
         <details>

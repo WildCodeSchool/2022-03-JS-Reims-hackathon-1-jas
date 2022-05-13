@@ -26,11 +26,11 @@ export default function HomeBin() {
       <h1>Votre recherche</h1>
       <p>
         {/* eslint-disable-next-line react/no-unescaped-entities */}
-        Pas besoin de vous déplacer ! La bouteille d'eau est un déchet à jeter
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
-        dans la poubelle d'ordures recyclables de votre immeuble (poubelle
-        jaune). Voici ci-dessous les dates de levée des poubelles jaunes dans
-        votre commune :
+        Pas besoin de vous déplacer ! La <strong>bouteille d'eau</strong> est un
+        déchet à jeter
+        {/* eslint-disable-next-line react/no-unescaped-entities */} dans la
+        poubelle d'ordures recyclables de votre immeuble (poubelle jaune). Voici
+        ci-dessous les dates de levée des poubelles jaunes dans votre commune :
       </p>
       <div className="flex-container">
         <img
