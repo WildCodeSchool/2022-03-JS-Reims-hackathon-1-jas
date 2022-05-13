@@ -21,11 +21,11 @@ export default function Home() {
     <>
       <Header />
       <div className="presentation">
-        <h1>Je suis Mister Bin</h1>
-        <h2>Votre assistant dans la gestion des déchets</h2>
+        <h1>Salut, je suis Mister Bin</h1>
+        <h2>Votre assistant dans la gestion des déchets !</h2>
       </div>
-      <p>Quel déchet souhaitez-vous jeter ?</p>
       <img src="src/assets/images/6.png" alt="mascot" className="mascot" />
+      <p className="home-p">Quel déchet souhaitez-vous jeter ?</p>
       <div className="input-search">
         <input
           id="search"

@@ -33,7 +33,7 @@ export default function MyBin() {
   return (
     <>
       <Header />
-      <h2>Bonjour Simon !</h2>
+      <h2 className="mybin-h2">Bonjour Simon !</h2>
       <img
         src="src/assets/images/mister-bin-welcome.png"
         alt="mascot-welcome"
