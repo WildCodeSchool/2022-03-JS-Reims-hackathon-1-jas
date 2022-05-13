@@ -4,9 +4,9 @@ import "../App.css";
 export default function Header() {
   return (
     <div className="header">
-      <Link to="/connect">
+      <Link to="/connect" className="connect">
         <img
-          src="/src/assets/images/login-person-beige.png"
+          src="/src/assets/images/login-person-beige-24.png"
           alt="login"
           className="login-image"
         />
