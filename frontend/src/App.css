@@ -142,6 +142,15 @@ input:focus {
   outline: none;
 }
 
+.did-you-know {
+  max-width: 75vw;
+  border: 4px dotted var(--beige);
+  color: var(--beige);
+  overflow: auto;
+  outline: none;
+  padding: 20px;
+}
+
 .around-me {
   display: flex;
   flex-direction: column;

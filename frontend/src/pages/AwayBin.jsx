@@ -33,8 +33,8 @@ export default function AwayBin() {
         <h3>Le saviez-vous ?</h3>
         <p>
           La France produit chaque année 14 millions de tonnes de déchets de
-          bois. Et contrairement aux idées reçues, le recyclage du bois ne
-          permet pas de créer de la pâte à papier. Les déchets de bois ont deux
+          bois. Contrairement aux idées reçues, le recyclage du bois ne permet
+          pas de créer de la pâte à papier. Les déchets de bois ont deux
           débouchés principaux : la valorisation matière dans l’industrie des
           panneaux de particules et la valorisation énergétique en chaufferie.
         </p>
