@@ -68,9 +68,10 @@ h2 {
 .mascot,
 .mascot-showing,
 .mascot-quiet,
-.mascot-welcome {
-  height: 400px;
-  max-height: 30%;
+.mascot-welcome,
+.mascot-laptop {
+  height: 350px;
+  max-height: 20%;
   width: auto;
 }
 
