@@ -58,14 +58,26 @@ h2 {
   text-align: center;
 }
 
-p {
+.did-you-know {
+  font-size: 12px;
   margin: 1rem;
+  border: 5px dotted var(--beige);
+  padding: .75rem;
 }
 
 .mascot,
-.mascot-showing {
-  max-height: 30%;
+.mascot-showing,
+.mascot-quiet,
+.mascot-welcome,
+.mascot-laptop {
+  height: 350px;
+  max-height: 20%;
   width: auto;
+}
+
+.mascot-welcome {
+  position: absolute;
+  top: 25%; right: 25%;
 }
 
 .login {
@@ -215,6 +227,7 @@ input:focus {
 
 .ReactModal__Overlay--before-close {
   opacity: 0;
+
 }
 
 @media screen and (min-width: 700px) {
@@ -224,3 +237,12 @@ input:focus {
     flex-direction: row-reverse;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .map-container {
+    display: flex;
+    justify-content: center;
+  }
+  .mascot-welcome {
+    display: none;
+  }
