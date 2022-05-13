@@ -39,7 +39,7 @@ main {
 }
 
 main > * + * {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .connect {
@@ -57,7 +57,6 @@ main > * + * {
 h1 {
   color: var(--beige);
   text-decoration: none;
-  padding-bottom: 1rem;
 }
 
 h2 {
@@ -72,17 +71,33 @@ h2 {
 }
 
 .mascot,
-.mascot-showing,
 .mascot-quiet,
 .mascot-welcome,
 .mascot-laptop {
-  max-height: 200px;
+  max-height: 300px;
   width: auto;
+}
+.mascot-showing {
+  height: 200px;
+  align-self: start;
+}
+.mascot-quiet {
+  height: 250px;
+  margin-bottom: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
 }
 
 .mascot-welcome {
   position: absolute;
   top: 25%; right: 25%;
+}
+
+.waste-collection {
+  margin-left: 1rem;
 }
 
 .login {
@@ -170,6 +185,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   text-align: center;
+  gap: 1rem;
 }
 
 .map-container {
@@ -269,6 +285,10 @@ input:focus {
 .ReactModal__Overlay--before-close {
   opacity: 0;
 
+}
+
+details {
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 700px) {
