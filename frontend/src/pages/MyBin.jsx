@@ -82,7 +82,8 @@ export default function MyBin() {
               closeTimeoutMS={500}
             >
               <div>
-                Adresse actuelle: Rue Armand Benet, Évreux
+                Adresse actuelle: Rue Armand Benet, Évreux <br />
+                Nouvelle adresse :
                 <input id="search-adress" name="search" type="text" />
               </div>
 
