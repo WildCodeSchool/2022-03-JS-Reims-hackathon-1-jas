@@ -42,7 +42,16 @@ main {
   align-items: center;
 }
 
+.header :first-child {
+  object-position: top right;
+  margin: 2rem;
+  width: 48px;
+  height: 48px;
+}
+
+.header :nth-child(2),
 h1 {
+  
   color: var(--beige);
   text-decoration: none;
   padding-bottom: 2rem;
@@ -70,6 +79,7 @@ h2 {
   text-align: center;
 }
 
-:is(.email, .password) input:focus, :active {
+:is(.email, .password) input:focus,
+:active {
   outline: none;
 }
