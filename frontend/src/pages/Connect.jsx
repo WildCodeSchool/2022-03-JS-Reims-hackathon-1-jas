@@ -15,7 +15,7 @@ export default function Connect() {
           Email : <input id="email" name="email" type="email" />
         </div>
         <div className="password">
-          Mot de passe :{" "}
+          Mot de passe :
           <input type="password" id="pass" name="password" required />
         </div>
       </form>
