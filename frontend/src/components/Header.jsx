@@ -3,13 +3,9 @@ import "../App.css";
 
 export default function Header() {
   return (
-    <div className="header">
+    <div>
       <Link to="/connect" className="connect">
-        <img
-          src="/src/assets/images/login-person-beige-24.png"
-          alt="login"
-          className="login-image"
-        />
+        <img src="/src/assets/images/login-person-beige-24.png" alt="login" />
       </Link>
       <Link to="/">
         <h1>Mister Bin</h1>
