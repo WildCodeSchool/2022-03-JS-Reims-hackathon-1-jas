@@ -165,9 +165,11 @@ input:focus {
 }
 
 .around-me {
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   text-align: center;
+  gap: 1rem;
 }
 
 .map-container {
@@ -238,7 +240,9 @@ input:focus {
 .ReactModal__Overlay--before-close {
   opacity: 0;
 }
-
+.mascot-flag {
+  max-height: 100px;
+}
 @media screen and (min-width: 700px) {
   .mascot,
   .mascot-showing {

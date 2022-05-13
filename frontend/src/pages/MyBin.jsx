@@ -87,6 +87,11 @@ export default function MyBin() {
               overlayClassName="myoverlay"
               closeTimeoutMS={500}
             >
+              <img
+                src="/src/assets/images/mister-bin-flag.png"
+                alt="mascot-flag"
+                className="mascot-flag"
+              />
               <div>
                 Adresse actuelle: <br />
                 {adress} <br />
@@ -97,11 +102,9 @@ export default function MyBin() {
                   name="search"
                   type="text"
                   value={setAdress}
+                  onChange={(event) => setAdress(event.target.value)}
                 />
-                <br />
-                {setAdress}
               </div>
-
               <button
                 type="button"
                 className="button-adress"
