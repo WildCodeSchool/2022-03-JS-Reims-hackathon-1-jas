@@ -8,14 +8,14 @@ export default function Home() {
     "bottes",
     "bouchon de bouteille",
     "bouteille d'eau",
-    "bouteille de lait",
-    "bouteille de vin",
     "carton",
     "cartouche d'encre",
-    "chaîne",
     "chaise",
-    "chaussures",
   ];
+
+  const clearInput = () => {
+    setSearch("");
+  };
 
   return (
     <>
@@ -26,25 +26,34 @@ export default function Home() {
       </div>
       <p>Quel déchet souhaitez-vous jeter ?</p>
       <img src="src/assets/images/6.png" alt="mascot" className="mascot" />
-      <input
-        id="search"
-        name="search"
-        type="text"
-        value={search}
-        onChange={(event) => setSearch(event.target.value)}
-      />
-      <Link to={wasteTypeArray[2].includes(search) ? "/homebin" : "/awaybin"}>
-        <button type="button" className="button-search">
-          Rechercher
-        </button>
-        <ul>
-          {wasteTypeArray
-            .filter((waste) => search !== "" && waste.includes(search))
-            .map((waste) => (
-              <li key={waste}>{waste}</li>
-            ))}
-        </ul>
-      </Link>
+      <div className="input-search">
+        <input
+          id="search"
+          name="search"
+          type="text"
+          placeholder="Votre recherche"
+          value={search}
+          onChange={(event) => setSearch(event.target.value)}
+        />
+        {search.length === 0 ? (
+          <button type="button" className="button-search">
+            🔍
+          </button>
+        ) : (
+          <button type="button" className="button-search" onClick={clearInput}>
+            ✖️
+          </button>
+        )}
+        <Link to={wasteTypeArray[2].includes(search) ? "/homebin" : "/awaybin"}>
+          <ul className="waste-result">
+            {wasteTypeArray
+              .filter((waste) => search !== "" && waste.includes(search))
+              .map((waste) => (
+                <li key={waste}>{waste}</li>
+              ))}
+          </ul>
+        </Link>
+      </div>
     </>
   );
 }

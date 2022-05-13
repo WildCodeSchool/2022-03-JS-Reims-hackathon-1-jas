@@ -19,6 +19,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   text-decoration: none;
 }
 
@@ -34,6 +35,11 @@ main {
   height: 100vh;
   justify-content: space-evenly;
   align-items: center;
+  padding: 1rem;
+}
+
+main > * + * {
+  margin-top: 1rem;
 }
 
 .connect {
@@ -51,7 +57,6 @@ main {
 h1 {
   color: var(--beige);
   text-decoration: none;
-  padding-bottom: 1rem;
 }
 
 h2 {
@@ -66,19 +71,34 @@ h2 {
 }
 
 .mascot,
-.mascot-showing,
 .mascot-quiet,
 .mascot-welcome,
 .mascot-laptop {
-  height: 350px;
-  max-height: 20%;
+  max-height: 300px;
   width: auto;
+}
+.mascot-showing {
+  height: 200px;
+  align-self: start;
+}
+.mascot-quiet {
+  height: 250px;
+  margin-bottom: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
 }
 
 .mascot-welcome {
   position: absolute;
   top: 25%;
   right: 25%;
+}
+
+.waste-collection {
+  margin-left: 1rem;
 }
 
 .login {
@@ -88,7 +108,6 @@ h2 {
   gap: 1rem;
 }
 
-.button-search,
 .button-connect,
 .button-adress {
   margin: 10px;
@@ -117,12 +136,20 @@ h2 {
 }
 
 input {
-  margin: 10px;
   padding: 0 10px;
   transition: 0.5s;
   background: transparent;
-  min-height: 25px;
+  height: 30px;
   min-width: 100px;
+  border: 1px solid var(--beige);
+  color: var(--beige);
+}
+
+.button-search {
+  transition: 0.5s;
+  background: transparent;
+  height: 30px;
+  min-width: 30px;
   border: 1px solid var(--beige);
   color: var(--beige);
 }
@@ -186,6 +213,10 @@ input:focus {
   color: var(--light-green);
 }
 
+strong {
+  text-decoration: underline;
+}
+
 .notification-manager-container h4,
 .notification-manager-container h5 {
   text-align: center;
@@ -204,6 +235,35 @@ input:focus {
   background-color: var(--beige);
   color: var(--light-green);
   border: 2px solid var(--light-green);
+}
+
+.input-search {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: repeat(2, 1fr);
+  width: 200px;
+  flex-grow: 1;
+}
+
+#search,
+.button-search {
+  align-self: end;
+}
+
+.waste-result {
+  width: 200px;
+  height: auto;
+  margin: 0;
+  outline: none;
+  box-shadow: inset 0 0 0 2em var(--beige);
+  color: var(--light-green);
+  overflow: hidden;
+  overflow-y: auto;
+  align-self: start;
+}
+
+.homebin {
+  padding: 1rem;
 }
 
 .mymodal {
@@ -240,6 +300,11 @@ input:focus {
 .ReactModal__Overlay--before-close {
   opacity: 0;
 }
+
+details {
+  margin-top: 1rem;
+}
+
 .mascot-flag {
   max-height: 150px;
   margin-bottom: 1rem;
@@ -247,6 +312,7 @@ input:focus {
   margin-left: auto;
   margin-right: auto;
 }
+
 @media screen and (min-width: 700px) {
   .mascot,
   .mascot-showing {
