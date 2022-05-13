@@ -38,7 +38,8 @@ main {
 
 .connect {
   position: absolute;
-  top: 20px; right: 20px;
+  top: 20px;
+  right: 20px;
 }
 
 .presentation {
@@ -64,10 +65,18 @@ h2 {
   gap: 1rem;
 }
 
-.button {
-  background-color: var(--beige);
-  color: var(--dark-green);
-  border: none;
+.button-search {
+  margin: 10px;
+  transition: 0.5s;
+  background: transparent;
+  min-height: 50px;
+  min-width: 100px;
+  border: 4px solid var(--beige);
+  color: var(--beige);
+}
+.button-search:hover {
+  box-shadow: inset 0 0 0 2em var(--beige);
+  color: var(--light-green);
 }
 
 .collect {
@@ -75,6 +84,7 @@ h2 {
   text-align: center;
 }
 
-:is(.email, .password) input:focus, :active {
+:is(.email, .password) input:focus,
+:active {
   outline: none;
 }
