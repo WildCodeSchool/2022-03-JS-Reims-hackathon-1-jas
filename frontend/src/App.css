@@ -51,11 +51,20 @@ main {
 h1 {
   color: var(--beige);
   text-decoration: none;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 h2 {
   text-align: center;
+}
+
+p {
+  margin: 1rem;
+}
+
+.mascot, .mascot-showing {
+  max-height: 30%;
+  width: auto;
 }
 
 .login {
@@ -105,4 +114,11 @@ input:focus {
 :is(.email, .password) input:focus,
 :active {
   outline: none;
+}
+
+@media screen and (min-width: 700px) {
+  .mascot, .mascot-showing {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
