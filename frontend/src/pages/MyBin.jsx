@@ -39,7 +39,7 @@ export default function MyBin() {
         alt="mascot-welcome"
         className="mascot-welcome"
       />
-      <main className="main-mybin">
+      <section className="main-mybin">
         <div className="around-me">
           Vous pouvez retrouvez sur la carte tous les points de récoltes autour
           de vous.
@@ -115,7 +115,7 @@ export default function MyBin() {
             </Modal>
           </div>
         </div>
-      </main>
+      </section>
     </>
   );
 }
