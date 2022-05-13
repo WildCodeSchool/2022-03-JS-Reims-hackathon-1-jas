@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Modal from "react-modal";
 import axios from "axios";
 import Map from "../components/Map";
 import Header from "../components/Header";
@@ -7,6 +8,11 @@ export default function MyBin() {
   const [toggleGreen, setToggleGreen] = useState(true);
   const [toggleYellow, setToggleYellow] = useState(true);
   const [landfill, setLandfill] = useState();
+  const [isOpen, setIsOpen] = useState(false);
+
+  function toggleModal() {
+    setIsOpen(!isOpen);
+  }
 
   function pickLandfill() {
     axios
@@ -63,7 +69,32 @@ export default function MyBin() {
                 ? "Collecte de déchets recyclables : OUI"
                 : "Collecte de déchets recyclables : NON"}
             </button>
-            <button type="button">Modifiez votre adresse</button>
+            <button type="button" onClick={toggleModal}>
+              Modifiez votre adresse
+            </button>
+            <Modal
+              isOpen={isOpen}
+              // eslint-disable-next-line react/jsx-no-bind
+              onRequestClose={toggleModal}
+              contentLabel="My dialog"
+              className="mymodal"
+              overlayClassName="myoverlay"
+              closeTimeoutMS={500}
+            >
+              <div>
+                Adresse actuelle: Rue Armand Benet, Évreux <br />
+                Nouvelle adresse :
+                <input id="search-adress" name="search" type="text" />
+              </div>
+
+              <button
+                type="button"
+                className="button-adress"
+                onClick={toggleModal}
+              >
+                Enregistrer
+              </button>
+            </Modal>
           </div>
         </div>
       </main>
