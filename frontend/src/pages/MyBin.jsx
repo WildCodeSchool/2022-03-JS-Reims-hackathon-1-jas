@@ -9,6 +9,7 @@ export default function MyBin() {
   const [toggleYellow, setToggleYellow] = useState(true);
   const [landfill, setLandfill] = useState();
   const [isOpen, setIsOpen] = useState(false);
+  const [adress, setAdress] = useState("Rue Armand Benet, 27000 Évreux");
 
   function toggleModal() {
     setIsOpen(!isOpen);
@@ -82,9 +83,18 @@ export default function MyBin() {
               closeTimeoutMS={500}
             >
               <div>
-                Adresse actuelle: Rue Armand Benet, Évreux <br />
+                Adresse actuelle: <br />
+                {adress} <br />
+                <br />
                 Nouvelle adresse :
-                <input id="search-adress" name="search" type="text" />
+                <input
+                  id="search-adress"
+                  name="search"
+                  type="text"
+                  value={setAdress}
+                />
+                <br />
+                {setAdress}
               </div>
 
               <button
