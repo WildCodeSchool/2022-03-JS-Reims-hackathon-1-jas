@@ -4,7 +4,8 @@ import Map from "../components/Map";
 import Header from "../components/Header";
 
 export default function MyBin() {
-  const [Toggle, setToggle] = useState(true);
+  const [toggleGreen, setToggleGreen] = useState(true);
+  const [toggleYellow, setToggleYellow] = useState(true);
   const [landfill, setLandfill] = useState();
 
   function pickLandfill() {
@@ -28,39 +29,43 @@ export default function MyBin() {
       <h2>Bonjour Simon !</h2>
       <main className="main-mybin">
         <div className="around-me">
-          Voici les différents points de récoltes autour de vous
-          {landfill && (
-            <Map
-              landfillAddress={landfill.fields.nom}
-              landfillCity={landfill.fields.commune}
-              landfillLongitude={landfill.fields.longitude}
-              landfillLatitude={landfill.fields.latitude}
-              landfillSchedule={landfill.fields.horaires}
-            />
-          )}
+          Vous pouvez retrouvez sur la carte tous les points de récoltes autour
+          de vous.
+          <div className="map-container">
+            {landfill && (
+              <Map
+                landfillAddress={landfill.fields.nom}
+                landfillCity={landfill.fields.commune}
+                landfillLongitude={landfill.fields.longitude}
+                landfillLatitude={landfill.fields.latitude}
+                landfillSchedule={landfill.fields.horaires}
+              />
+            )}
+          </div>
         </div>
-        <div className="notifications">
-          <h4>Gestion des notifications</h4>
-          Souhaitez-vous modifiez vos notifications
+        <div className="notification-manager-container">
+          <h4>Gestion des notifications </h4>
+          <h5>Souhaitez-vous modifiez vos notifications?</h5>
+          <div className="notification-manager">
+            <button
+              type="button"
+              onClick={() => setToggleGreen((prevState) => !prevState)}
+            >
+              {toggleGreen
+                ? "Collecte de déchets ménagers : OUI"
+                : "Collecte de déchets ménagers : NON"}
+            </button>
+            <button
+              type="button"
+              onClick={() => setToggleYellow((prevState) => !prevState)}
+            >
+              {toggleYellow
+                ? "Collecte de déchets recyclables : OUI"
+                : "Collecte de déchets recyclables : NON"}
+            </button>
+            <button type="button">Modifiez votre adresse</button>
+          </div>
         </div>
-        <button
-          type="button"
-          className="notification-verte"
-          onClick={() => setToggle((prevState) => !prevState)}
-        >
-          {Toggle
-            ? "Recevoir un rappel pour la collecte de déchets ménagers"
-            : "Ne pas recevoir de rappels pour la collecte de déchets ménagers"}
-        </button>
-        <button
-          type="button"
-          onClick={() => setToggle((prevState) => !prevState)}
-        >
-          {Toggle
-            ? "Recevoir un rappel pour la collecte de déchets recyclables"
-            : "Ne pas recevoir de rappels pour la collecte de déchets recyclables"}
-        </button>
-        <button type="button">Modifiez votre adresse</button>
       </main>
     </>
   );

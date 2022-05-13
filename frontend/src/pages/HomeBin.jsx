@@ -42,6 +42,15 @@ export default function HomeBin() {
           <li>Dates de collecte : {wasteCollection.fields.jour}</li>
         </ul>
       )}
+      <div className="did-you-know">
+        <h3>Le saviez-vous ?</h3>
+        <p>
+          Un Français consomme en moyenne 96 bouteilles plastiques par an !
+          Chaque jour, 25 millions de bouteilles sont jetées dans le pays. Pour
+          en finir avec ces chiffres vertigineux, sachez enfin que la production
+          de plastique a été multipliée par 50 en 50 ans en France.
+        </p>
+      </div>
     </>
   );
 }
