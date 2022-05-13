@@ -58,14 +58,25 @@ h2 {
   text-align: center;
 }
 
-p {
+.did-you-know {
+  font-size: 12px;
   margin: 1rem;
+  border: 5px dotted var(--beige);
+  padding: .75rem;
 }
 
 .mascot,
-.mascot-showing {
+.mascot-showing,
+.mascot-quiet,
+.mascot-welcome {
+  height: 400px;
   max-height: 30%;
   width: auto;
+}
+
+.mascot-welcome {
+  position: absolute;
+  top: 25%; right: 25%;
 }
 
 .login {
@@ -150,6 +161,16 @@ input:focus {
   background-color: var(--beige);
   color: var(--light-green);
   border: 2px solid var(--light-green);
+}
+
+@media screen and (max-width: 500px) {
+  .map-container {
+    display: flex;
+    justify-content: center;
+  }
+  .mascot-welcome {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 700px) {
