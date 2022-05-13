@@ -30,13 +30,20 @@ export default function AwayBin() {
         vous indique la déchetterie la plus proche de vous
       </p>
       {landfill && (
-        <Map
-          landfillAddress={landfill.fields.nom}
-          landfillCity={landfill.fields.commune}
-          landfillLongitude={landfill.fields.longitude}
-          landfillLatitude={landfill.fields.latitude}
-          landfillSchedule={landfill.fields.horaires}
-        />
+        <>
+          <Map
+            landfillAddress={landfill.fields.nom}
+            landfillCity={landfill.fields.commune}
+            landfillLongitude={landfill.fields.longitude}
+            landfillLatitude={landfill.fields.latitude}
+            landfillSchedule={landfill.fields.horaires}
+          />
+          <img
+            src="/src/assets/images/10.png"
+            alt="mascot-showing"
+            className="mascot-showing"
+          />
+        </>
       )}
     </>
   );

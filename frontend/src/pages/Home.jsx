@@ -25,6 +25,7 @@ export default function Home() {
         <h2>Votre assistant dans la gestion des déchets</h2>
       </div>
       <p>Quel déchet souhaitez-vous jeter ?</p>
+      <img src="src/assets/images/6.png" alt="mascot" className="mascot" />
       <input
         id="search"
         name="search"
