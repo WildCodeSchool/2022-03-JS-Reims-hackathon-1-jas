@@ -9,6 +9,7 @@ export default function MyBin() {
   const [toggleYellow, setToggleYellow] = useState(true);
   const [landfill, setLandfill] = useState();
   const [isOpen, setIsOpen] = useState(false);
+  const [adress, setAdress] = useState("Rue Armand Benet, 27000 Évreux");
 
   function toggleModal() {
     setIsOpen(!isOpen);
@@ -38,7 +39,7 @@ export default function MyBin() {
         alt="mascot-welcome"
         className="mascot-welcome"
       />
-      <main className="main-mybin">
+      <section className="main-mybin">
         <div className="around-me">
           Vous pouvez retrouvez sur la carte tous les points de récoltes autour
           de vous.
@@ -86,12 +87,24 @@ export default function MyBin() {
               overlayClassName="myoverlay"
               closeTimeoutMS={500}
             >
+              <img
+                src="/src/assets/images/mister-bin-flag-white-bg.png"
+                alt="mascot-flag"
+                className="mascot-flag"
+              />
               <div>
-                Adresse actuelle: Rue Armand Benet, Évreux <br />
+                Adresse actuelle: <br />
+                {adress} <br />
+                <br />
                 Nouvelle adresse :
-                <input id="search-adress" name="search" type="text" />
+                <input
+                  id="search-adress"
+                  name="search"
+                  type="text"
+                  value={setAdress}
+                  onChange={(event) => setAdress(event.target.value)}
+                />
               </div>
-
               <button
                 type="button"
                 className="button-adress"
@@ -102,7 +115,7 @@ export default function MyBin() {
             </Modal>
           </div>
         </div>
-      </main>
+      </section>
     </>
   );
 }
